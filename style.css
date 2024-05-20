@@ -1,0 +1,386 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    color: #000;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    font-family: "Poppins", sans-serif;
+}
+
+.containe{
+    position: relative;
+    width: 100%;
+    height: 450rem;
+}
+
+i{
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* Header */
+.header{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 4.5rem;
+    top: 40rem;
+    z-index: 10;
+}
+
+.demido-logo svg{
+    width: 22rem;
+    cursor: pointer;
+}
+
+.menu p{
+    font-size: 1.5rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* Navigation */
+.navbar{
+    display: flex;
+    align-items: center;
+}
+
+.nav-left{
+    display: flex;
+    width: 23%;
+    height: 40rem;
+    position: relative;
+    background: orange;
+}
+
+.nav-left p{
+    position: absolute;
+    left: 4rem;
+    top: 4rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.nav-left img{
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.nav-right{
+    display: flex;
+    justify-content: space-between;
+    background: #f5dcbe;
+    height: 40rem;
+    padding: 4rem;
+    flex: 1;
+}
+
+.nav-right-l{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.nav-right-l p{
+    display: flex;
+    align-items: center;
+    font-size: 0.7rem;
+    font-weight: 500;
+    height: 4rem;
+}
+
+.nav-right ul{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    height: 28rem;
+}
+
+.nav-right a{
+    text-decoration: none;
+    font-size: 3.6rem;
+    font-weight: 500;
+}
+
+.nav-right-r{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.nav-right-r-logo{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.nav-right-r-logo img{
+    width: 22rem;
+    border-radius: 5px;
+}
+
+.nav-right-r-link{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    height: 10rem;
+}
+
+.nav-right-r-link a{
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.nav-right-r-link-item{
+    position: absolute;
+    display: flex;
+    align-items: end;
+    flex-direction: column;
+    width: 15rem;
+    gap: 1rem;
+    right: 0;
+}
+
+.nav-right-r-link-items{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    cursor: pointer;
+}
+
+.nav-right-r-link-items{
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-right-r-link-items a{
+    font-weight: 500;
+}
+
+.nav-right-r-link-items img{
+    width: 1rem;
+}
+
+.nav-right-r-link-insta{
+    position: absolute;
+    width: 7rem;
+    gap: 0.5rem;
+    right: 0;
+    bottom: 1rem;
+    cursor: pointer;
+}
+
+/* Section One */
+.section-one{
+    display: flex;
+    position: relative;
+}
+
+.section-one img{
+    width: 100%;
+}
+
+.s-one-base{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    position: absolute;
+    bottom: 0;
+    padding: 4rem;
+    gap: 2.5rem;
+}
+
+.s-one-jap{
+    font-size: 5rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.s-one-eng{
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.s-one-arrow{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 9rem;
+    height: 9rem;
+    background: black;
+    border-radius: 50%;
+    right: 0;
+    bottom: 5rem;
+    cursor: pointer;
+}
+
+.s-one-arrow i{
+    color: #fff;
+    font-size: 2.8rem;
+}
+
+/* Section Two */
+.section-two{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 170rem;
+    background: #f5dcbe;
+    padding: 7rem;
+}
+
+.s-two-img-0{
+    width: 100%;
+    margin-bottom: 5rem;
+}
+
+.s-two-jap{
+    font-size: 5.5rem;
+    font-weight: 700;
+}
+.s-two-eng{
+    font-size: 1.2rem;
+    line-height: 3rem;
+    opacity: 0.8;
+}
+
+.s-two-img-1{
+    position: absolute;
+    width: 16rem;
+    top: 70rem;
+    right: 5rem;
+    z-index: 10;
+}
+
+.s-two-img-2{
+    position: absolute;
+    width: 37rem;
+    left: -24rem;
+    bottom: 19rem;
+    transform: rotate(-9deg);
+}
+
+.s-two-bottom{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    bottom: 12rem;
+    right: 8rem;
+    gap: 1rem;
+}
+
+.s-two-jap1{
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.s-two-eng2{
+    font-size: 2.7rem;
+    font-weight: 600;
+}
+
+/* Section Three */
+.section-three{
+    display: flex;
+    flex-direction: column;
+    height: 100rem;
+    background: #f5dcbe;
+    padding: 10rem;
+}
+
+.s-three-head{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.s-three-topic{
+    width: 6rem;
+}
+
+.s-three-rightarr{
+    width: 0.7rem;
+}
+
+.s-three-img{
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.s-three-img img{
+    width: 30rem;
+    border-radius: 5px;
+}
+
+.s-three-card{
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+    /* background: yellow; */
+    margin-bottom: 3rem;
+    gap: 8rem;
+    cursor: pointer;
+}
+
+.s-three-card-top{
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.s-three-imgnews{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.s-three-imgnews img{
+    width: 100%;
+}
+
+.s-three-date{
+    font-size: 0.7rem;
+    opacity: 0.8;
+}
+
+.s-three-desc{
+    font-size: 0.8rem;
+}
+
+.s-three-card-bottom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3.7rem;
+    gap: 0.2rem;
+    border-radius: 2px;
+    background: #000;
+    color: #fff;
+}
+
+.s-three-more{
+    color: #fff;
+    font-size: 0.7rem;
+}
+
+.s-three-card-bottom i{
+    transform: scale(0.6);
+    color: #fff;
+}
