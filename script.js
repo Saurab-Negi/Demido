@@ -65,30 +65,100 @@ $(document).ready(function(){
 //     navbar.style.display = 'none';
 // });
 
-// section 1
-gsap.to(".s-1-arrow",{
-    x: 40,
-    duration: 0.5,
-    scrollTrigger: {
-        trigger: ".s-1-arrow",
-        start: "top 30%",
-        end: "cneter 20%",
-        // markers: true,
-        toggleClass: "red",
-    }
-})
 
-gsap.to(".s-two-img-0",{
+//Section-2 GSAP Animation
+gsap.to(".s-2-img-0",{
     y: -80,
     duration: 3,
 })
-gsap.to(".s-two-img-1",{
+gsap.to(".s-2-img-1",{
     x: 30,
     y: -60,
     duration: 3,
 })
-gsap.to(".s-two-img-2",{
+gsap.to(".s-2-img-2",{
     x: -20,
     y: -50,
     duration: 3,
 })
+
+$(document).ready(function(){
+  $('.s-1-carousel').slick({
+    infinite: true,
+    autoplay: true,
+    slidesToShow: 1,
+    slidesToScroll: 1, // Change to 1 to scroll one slide at a time
+    autoplaySpeed: 3000, // Set autoplay speed to 2 seconds
+    speed: 1000,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  });
+});
+
+//Section-4 slider using Slik
+$(document).ready(function(){
+    $('.s-4-slider').slick({
+      arrow: true,
+      infinite: true,
+      slidesToShow: 3,
+      slidesToScroll: 1, // Change to 1 to scroll one slide at a time
+      autoplaySpeed: 2000, // Set autoplay speed to 2 seconds
+      speed: 1000,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: true,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
+    });
+  });  
+
+
+//Section-1 animation using AOS
+AOS.init({
+    offset: 120,
+    duration: 1000,
+    easing: 'ease',
+});
