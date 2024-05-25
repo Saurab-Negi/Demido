@@ -223,11 +223,11 @@ $(document).ready(function(){
     scrollTrigger: {
         trigger: ".bottle-1",
         scroller: "body",
-        markers: true,
+        // markers: true,
         start: "top 100%",
         end: "top 80%",
         scrub: 3,
-        // pin: true,
+        pin: true,
     }
   });
   t4
@@ -244,7 +244,7 @@ $(document).ready(function(){
         start: "top 100%",
         end: "top 80%",
         scrub: 3,
-        // pin: true,
+        pin: true,
     }
   });
   t5.to(".bottle-2", { y: -500, duration: 3, ease: "power1.inOut" })
@@ -260,59 +260,125 @@ $(document).ready(function(){
         start: "top 100%",
         end: "top 80%",
         scrub: 3,
-        // pin: true,
+        pin: true,
     }
   });
   t6.to(".bottle-3", { y: -500, duration: 3, ease: "power1.inOut" })
   .to(".bottle-3", { rotate: 20, duration: 3, ease: "power1.inOut" })
   .to(".bottle-3", { x: 130, duration: 3, ease: "power1.inOut" })
 
-//Moving Text
-
-function breakTheText(){
-  //var h1Text= document.querySelector("h1").textContent  {Short hand property}
-
-  var h1= document.querySelector("h1")
-  var h1Text= h1.textContent //It gives the text which is inside the h1
-  var splittedText= h1Text.split("") //Breaks the string into individual chars
-  var clutter= ""
-
-  splittedText.forEach(function(char){
-    clutter+= `<span>${char}</span>` //chars will be stored in individual spans 
-  })
-  h1.innerHTML= clutter
-}
-
-breakTheText() //Calling the above function
 
 // GSAP Marquee and Wave Animation
-gsap.timeline()
-  .fromTo("h1 span", 
-    { 
-      x: "95vw" 
-    }, 
-    { 
-      x: "-90vw", 
-      duration: 10, 
-      speed: 5,
-      ease: "power1.inOut", 
-      repeat: -1 
-    }
-  );
+
+// Break the text into spans for GSAP animation
+//var h1Text= document.querySelector("h1").textContent  {Short hand property}
+
+function breakTheText() {
+  const h1s = document.querySelectorAll("h1");
+  h1s.forEach(h1 => {
+      const h1Text = h1.textContent; //It gives the text which is inside the h1
+      const splittedText = h1Text.split("");  //Breaks the string into individual chars
+      let clutter = "";
+
+      splittedText.forEach(char => {
+          clutter += `<span>${char}</span>`;  //chars will be stored in individual spans
+      });
+
+      h1.innerHTML = clutter;
+  });
+}
+breakTheText(); // Calling the above function
 
 gsap.fromTo("h1 span", 
-  { 
-    y: 20
-  }, 
-  { 
-    y: -20, 
-    duration: 1.5, 
-    ease: "power1.inOut", 
-    repeat: -1, 
-    yoyo: true, 
-    stagger: {
-      each: 0.3, 
-      repeat: -1
-    }
+{ 
+  y: 25,
+  duration: 1.5,
+  ease: "power1.inOut",
+  repeat: -1, 
+  yoyo: true, 
+  stagger: {
+    each: 0.3, 
+    repeat: -1
   }
+}, 
+{ 
+  y: -25, 
+  duration: 1.5, 
+  ease: "power1.inOut", 
+  repeat: -1, 
+  yoyo: true, 
+  stagger: {
+    each: 0.3, 
+    repeat: -1
+  }
+}
 );
+
+//On scroll animation of text right/left
+window.addEventListener("wheel", function(event) {
+  if (event.deltaY > 0) {
+      gsap.to(".marque", {
+          xPercent: -200,
+          duration: 10,
+          repeat: -1,
+          ease: "none",
+      });
+  } else {
+      gsap.to(".marque", {
+          xPercent: 0,
+          duration: 10,
+          repeat: -1,
+          ease: "none",
+      });
+  }
+});
+
+//Section-6
+
+//card-1
+let t7 = gsap.timeline({
+  scrollTrigger: {
+      trigger: ".card-1",
+      scroller: "body",
+      // markers: true,
+      start: "top 55%",
+      end: "top 20%",
+      scrub: 5,
+      // pin: true,
+  }
+});
+t7.to(".card-1", { x: -10, duration: 1, ease: "power1.inOut" })
+.to(".card-1", { rotate: -5, duration: 2, ease: "power1.inOut" })
+.to(".card-1", { y: -10, duration: 1, ease: "power1.inOut" })
+.to(".card-1", { y: -30, duration: 1, ease: "power1.inOut" })
+.to(".card-1", { y: -50, duration: 1, ease: "power1.inOut" })
+.to(".card-1", { y: -70, duration: 1, ease: "power1.inOut" })
+.to(".card-1", { zIndex: 0 , duration: 1, ease: "power1.inOut" })
+.to(".card-1", { rotate: 0, duration: 2, ease: "power1.inOut" })
+.to(".card-1", { opacity: 0.9, duration: 1, ease: "power1.inOut" })
+.to(".card-1", { x: 0, duration: 1, ease: "power1.inOut" })
+.to(".card-1", { opacity: 0.7, duration: 1, ease: "power1.inOut" })
+
+//card-2
+let t8 = gsap.timeline({
+  scrollTrigger: {
+      trigger: ".card-2",
+      scroller: "body",
+      // markers: true,
+      start: "top 50%",
+      end: "top 15%",
+      scrub: 5,
+      // pin: true,
+  }
+});
+t8.to(".card-2", { x: 10, duration: 1, ease: "power1.inOut" })
+.to(".card-2", { rotate: 5, duration: 2, ease: "power1.inOut" })
+.to(".card-2", { y: 10, duration: 1, ease: "power1.inOut" })
+.to(".card-2", { y: 30, duration: 1, ease: "power1.inOut" })
+.to(".card-2", { opacity: 0.8, duration: 1, ease: "power1.inOut" })
+.to(".card-2", { y: 50, duration: 1, ease: "power1.inOut" })
+.to(".card-2", { y: 70, duration: 1, ease: "power1.inOut" })
+.to(".card-2", { zIndex: 100 , duration: 1, ease: "power1.inOut" })
+.to(".card-2", { rotate: 0, duration: 2, ease: "power1.inOut" })
+.to(".card-2", { opacity: 1, duration: 1, ease: "power1.inOut" })
+.to(".card-2", { x: 0, duration: 1, ease: "power1.inOut" })
