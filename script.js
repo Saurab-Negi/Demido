@@ -341,8 +341,8 @@ let t7 = gsap.timeline({
       trigger: ".card-1",
       scroller: "body",
       // markers: true,
-      start: "top 55%",
-      end: "top 20%",
+      start: "top 64%",
+      end: "top 29%",
       scrub: 5,
       // pin: true,
   }
@@ -352,14 +352,13 @@ t7.to(".card-1", { x: -10, duration: 1, ease: "power1.inOut" })
 .to(".card-1", { y: -10, duration: 1, ease: "power1.inOut" })
 .to(".card-1", { y: -30, duration: 1, ease: "power1.inOut" })
 .to(".card-1", { y: -50, duration: 1, ease: "power1.inOut" })
-.to(".card-1", { y: -70, duration: 1, ease: "power1.inOut" })
 .to(".card-1", { zIndex: 0 , duration: 1, ease: "power1.inOut" })
 .to(".card-1", { rotate: 0, duration: 2, ease: "power1.inOut" })
 .to(".card-1", { opacity: 0.9, duration: 1, ease: "power1.inOut" })
 .to(".card-1", { x: 0, duration: 1, ease: "power1.inOut" })
 .to(".card-1", { opacity: 0.7, duration: 1, ease: "power1.inOut" })
 
-//card-2
+// card-2
 let t8 = gsap.timeline({
   scrollTrigger: {
       trigger: ".card-2",
@@ -375,10 +374,103 @@ t8.to(".card-2", { x: 10, duration: 1, ease: "power1.inOut" })
 .to(".card-2", { rotate: 5, duration: 2, ease: "power1.inOut" })
 .to(".card-2", { y: 10, duration: 1, ease: "power1.inOut" })
 .to(".card-2", { y: 30, duration: 1, ease: "power1.inOut" })
-.to(".card-2", { opacity: 0.8, duration: 1, ease: "power1.inOut" })
 .to(".card-2", { y: 50, duration: 1, ease: "power1.inOut" })
-.to(".card-2", { y: 70, duration: 1, ease: "power1.inOut" })
+.to(".card-2", { opacity: 0.8, duration: 1, ease: "power1.inOut" })
 .to(".card-2", { zIndex: 100 , duration: 1, ease: "power1.inOut" })
 .to(".card-2", { rotate: 0, duration: 2, ease: "power1.inOut" })
 .to(".card-2", { opacity: 1, duration: 1, ease: "power1.inOut" })
 .to(".card-2", { x: 0, duration: 1, ease: "power1.inOut" })
+
+//card-1
+let t9 = gsap.timeline({
+  scrollTrigger: {
+      trigger: ".card-3",
+      scroller: "body",
+      // markers: true,
+      start: "top 64%",
+      end: "top 29%",
+      scrub: 5,
+      // pin: true,
+  }
+});
+t9.to(".card-3", { x: -10, duration: 1, ease: "power1.inOut" })
+.to(".card-3", { rotate: -5, duration: 2, ease: "power1.inOut" })
+.to(".card-3", { y: 10, duration: 1, ease: "power1.inOut" })
+.to(".card-3", { y: 30, duration: 1, ease: "power1.inOut" })
+.to(".card-3", { y: 50, duration: 1, ease: "power1.inOut" })
+.to(".card-3", { zIndex: 100 , duration: 1, ease: "power1.inOut" })
+.to(".card-3", { rotate: 0, duration: 2, ease: "power1.inOut" })
+.to(".card-3", { opacity: 1, duration: 1, ease: "power1.inOut" })
+.to(".card-3", { x: 5, duration: 1, ease: "power1.inOut" })
+
+// card-2
+let t10 = gsap.timeline({
+  scrollTrigger: {
+      trigger: ".card-4",
+      scroller: "body",
+      // markers: true,
+      start: "top 71%",
+      end: "top 50%",
+      scrub: 5,
+      // pin: true,
+  }
+});
+t10.to(".card-4", { x: 10, duration: 1, ease: "power1.inOut" })
+.to(".card-4", { rotate: 5, duration: 2, ease: "power1.inOut" })
+.to(".card-4", { y: -10, duration: 1, ease: "power1.inOut" })
+.to(".card-4", { y: -30, duration: 1, ease: "power1.inOut" })
+.to(".card-4", { y: -50, duration: 1, ease: "power1.inOut" })
+.to(".card-4", { zIndex: 0 , duration: 1, ease: "power1.inOut" })
+.to(".card-4", { opacity: 0.7, duration: 1, ease: "power1.inOut" })
+.to(".card-4", { rotate: 0, duration: 2, ease: "power1.inOut" })
+.to(".card-4", { x: -5, duration: 1, ease: "power1.inOut" })
+
+
+
+//Section-7
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+
+let timeline = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".section-7",
+    pin: true,
+    pinSpacing: true,
+    start: "center center",
+    end: "+=4000",
+    // markers: true,
+    scrub: 1,
+  }
+});
+
+timeline.addLabel('card1')
+  .fromTo('.s-7-card-1', {yPercent: 100}, {yPercent: 0, opacity: 1})
+  .fromTo('.s-7-card-2', {zIndex: 1, yPercent: 100}, {yPercent: -5, opacity: 1, xPercent: 2}, "+=0.5")
+  .to('.s-7-card-1', {xPercent: 5, yPercent: -4, opacity: 0.9, zIndex: -1}, "-=0.3")
+
+  .addLabel('card2')
+  .fromTo('.s-7-card-3', {zIndex: 1, yPercent: 100}, {yPercent: -5, opacity: 1, xPercent: 4}, "+=0.5")
+  .to('.s-7-card-1', {xPercent: 10, yPercent: -15}, "-=0.3")
+  .to('.s-7-card-2', {xPercent: 7, yPercent: -13, opacity: 0.9, zIndex: -1}, "-=0.5")
+
+  .addLabel('card3')
+  .fromTo('.s-7-card-4', {zIndex: 1, yPercent: 100}, {yPercent: -8, opacity: 1, xPercent: 6}, "+=0.5")
+  .to('.s-7-card-1', {xPercent: 13, yPercent: -18}, "-=0.3")
+  .to('.s-7-card-2', {xPercent: 10, yPercent: -16}, "-=0.5")
+  .to('.s-7-card-3', {xPercent: 7, yPercent: -14, opacity: 0.9, zIndex: -1}, "-=0.5")
+
+  .addLabel('card4')
+  .fromTo('.s-7-card-5', {zIndex: 1, yPercent: 100}, {yPercent: -11, opacity: 1, xPercent: 8}, "+=0.5")
+  .to('.s-7-card-1', {xPercent: 22, yPercent: -26}, "-=0.3")
+  .to('.s-7-card-2', {xPercent: 18, yPercent: -23}, "-=0.5")
+  .to('.s-7-card-3', {xPercent: 14, yPercent: -20}, "-=0.5")
+  .to('.s-7-card-4', {xPercent: 10, yPercent: -17, opacity: 0.9, zIndex: -1}, "-=0.5")
+
+  .addLabel('card5')
+  .fromTo('.s-7-card-6', {zIndex: 1, yPercent: 100}, {yPercent: -13, opacity: 1, xPercent: 10}, "+=0.5")
+  .to('.s-7-card-1', {xPercent: 29, yPercent: -40}, "-=0.3")
+  .to('.s-7-card-2', {xPercent: 25, yPercent: -35}, "-=0.5")
+  .to('.s-7-card-3', {xPercent: 21, yPercent: -30}, "-=0.5")
+  .to('.s-7-card-4', {xPercent: 17, yPercent: -25}, "-=0.5")
+  .to('.s-7-card-5', {xPercent: 13, yPercent: -21, opacity: 0.9, zIndex: -1}, "-=0.5")
+
+  .addLabel('card6');
