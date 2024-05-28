@@ -454,8 +454,8 @@ timeline.addLabel('card1')
 
   .addLabel('card3')
   .fromTo('.s-7-card-4', {zIndex: 1, yPercent: 100}, {yPercent: -8, opacity: 1, xPercent: 6}, "+=0.5")
-  .to('.s-7-card-1', {xPercent: 13, yPercent: -18}, "-=0.3")
-  .to('.s-7-card-2', {xPercent: 10, yPercent: -16}, "-=0.5")
+  .to('.s-7-card-1', {xPercent: 13, yPercent: -28}, "-=0.3")
+  .to('.s-7-card-2', {xPercent: 10, yPercent: -22}, "-=0.5")
   .to('.s-7-card-3', {xPercent: 7, yPercent: -14, opacity: 0.9, zIndex: -1}, "-=0.5")
 
   .addLabel('card4')
@@ -474,3 +474,27 @@ timeline.addLabel('card1')
   .to('.s-7-card-5', {xPercent: 13, yPercent: -21, opacity: 0.9, zIndex: -1}, "-=0.5")
 
   .addLabel('card6');
+
+
+  //Section-8
+  gsap.registerPlugin(ScrollTrigger, ModifiersPlugin);
+
+  gsap.to(".s-8-card-up", {
+    xPercent: 620,
+    duration: 25,
+    ease: "none",
+    repeat: -1,
+    modifiers: {
+      xPercent: gsap.utils.wrap(620, 0) // xPercent modifier with gsap.utils.wrap creates the effect of an infinite loop by wrapping the xPercent value.
+    }
+  });
+
+  gsap.to(".s-8-card-down", {
+    xPercent: -620,
+    duration: 25,
+    ease: "none",
+    repeat: -1,
+    modifiers: {
+      xPercent: gsap.utils.wrap(-620, 0)
+    }
+  });
