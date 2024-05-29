@@ -367,53 +367,119 @@ a{
 .section-2{
     position: relative;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     flex-direction: column;
-    height: 170rem;
-    background:  #f5dcbe;
-    padding: 7rem;
+    width: 100%;
+    height: 400vh;
+    background: #f5dcbe;
 }
 
 .s-2-up{
+    position: relative;
     display: flex;
     justify-content: center;
     width: 100%;
-    padding: 1rem;
-    margin-bottom: 5rem;
+    height: 30%;
+    overflow: hidden;
+}
+
+.s-2-five-1{
+    position: absolute;
+    width: 15%;
+    height: 60%;
+    bottom: -40%;
+    left: 8%;
+    transform: rotate(-16deg);
+}
+
+.s-2-five-2{
+    position: absolute;
+    width: 8%;
+    height: 50%;
+    bottom: -32%;
+    left: 27%;
+    transform: rotate(-15deg);
+}
+
+.s-2-five-3{
+    position: absolute;
+    width: 16%;
+    height: 62%;
+    bottom: -42%;
+    left: 41%;
+    transform: rotate(7deg);
+}
+
+.s-2-five-4{
+    position: absolute;
+    width: 8%;
+    height: 55%;
+    bottom: -35%;
+    right: 28%;
+    transform: rotate(13deg);
+}
+
+.s-2-five-5{
+    position: absolute;
+    width: 15%;
+    height: 60%;
+    bottom: -40%;
+    right: 10%;
+    transform: rotate(15deg);
+}
+
+.s-2-body{
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+    flex: 1;
 }
 
 .s-2-jap{
-    font-size: 5.5rem;
-    font-weight: 700;
+    width: 45%;
+    margin-left: 10%;
+    margin-bottom: 10%;
 }
 .s-2-eng{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
     font-size: 1.2rem;
-    line-height: 3rem;
+    line-height: 3.5rem;
+    font-weight: 500;
     opacity: 0.8;
+    margin-left: 10%;
+    margin-bottom: 10%;
 }
 
 .s-2-img-1{
     position: absolute;
-    width: 16rem;
-    top: 76rem;
-    right: 5rem;
+    width: 21%;
+    top: 25%;
+    right: 5%;
     z-index: 100;
+    transform: rotate(12deg);
 }
 
 .s-2-img-2{
     position: absolute;
-    width: 37rem;
-    left: -24rem;
-    bottom: 19rem;
-    transform: rotate(-9deg);
+    width: 45%;
+    left: -30%;
+    bottom: 10%;
+    transform: rotate(-5deg);
 }
 
-.s-2-bottom{
+.s-2-logo{
     position: absolute;
     display: flex;
-    flex-direction: column;
-    bottom: 12rem;
-    right: 8rem;
-    gap: 1rem;
+    width: 33%;
+    bottom: 10%;
+    right: 10%;
 }
 
 
@@ -488,50 +554,53 @@ a{
 .section-4{
     position: relative;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-direction: column;
+    width: 100%;
+    height: 170vh ;
     background:  #f5dcbe;
-    padding: 7rem 0 7rem 7rem;
-}
-
-.s-4-head{
-    display: flex;
-    margin-bottom: 1rem;
+    padding-left: 7rem;
 }
 
 .s-4-topic{
-    width: 7rem;
+    width: 8%;
+    margin-top: 8%;
 }
 
 .s-4-slider{
     display: flex;
-    gap: 2rem;
+    position: relative;
+    width: 100%;
+    height: 45%;
+    align-items: flex-end;
 }
 
 .s-4-card{
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    /* width: 10rem;
-    height: 27rem; */
-    /* background: yellow; */
-    margin-bottom: 5rem;
+    height: 25rem;
     cursor: pointer;
 }
 
 .s-4-card-top{
     display: flex;
     flex-direction: column;
-    gap: .5rem;
+    width: 100%;
+    height: 90%;
+    gap: 2%;
 }
 
 .s-4-imgnews{
+    display: flex;
     width: 100%;
+    height: auto;
     border-radius: 10px;
 }
 
 .s-4-imgnews img{
     width: 100%;
+    object-fit: cover;
 }
 .s-4-imgnews:hover{
     transform: scale(0.85);
@@ -539,22 +608,29 @@ a{
 }
 
 .s-4-date{
+    display: flex;
+    width: 100%;
+    height: 10%;
     font-size: 0.7rem;
     opacity: 0.8;
 }
 
 .s-4-desc{
+    display: flex;
+    width: 100%;
+    height: 30%;
     font-size: 0.7rem;
     font-weight: 500;
+}
+
+.custom-slick .slick-slide{
+    margin-top: 1%;
+    margin-right: 1%;
 }
 
 .custom-slick .slick-arrow {
     position: absolute !important;
     top: 1rem !important;
-  }
-.custom-slick .slick-arrow:before {
-    /* position: relative;
-    color: none !important; */
   }
 
 .custom-slick .slick-prev{
@@ -576,15 +652,11 @@ a{
     color: #000000;
 }
 
-.custom-slick .slick-slide{
-    width: 18rem !important;
-}
-
 .s-4-card-bottom{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 3.7rem;
+    width: 15%;
     gap: 0.4rem;
     border-radius: 2px;
     background: #000;
@@ -592,6 +664,9 @@ a{
 }
 
 .s-4-more{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: #ffffff;
     font-size: 0.7rem;
 }
@@ -603,13 +678,18 @@ a{
 
 .s-4-img{
     display: flex;
-    gap: 2rem;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+    height: 40%;
     flex-wrap: wrap;
 }
 
 .s-4-img img{
-    width: 30rem;
+    width: 47%;
+    height: 33%;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 /* Section Five */
@@ -713,7 +793,7 @@ h1 span {
 
 .s-6-mid{
     position: relative;
-    top: -4rem;
+    /* top: -4rem; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -725,10 +805,12 @@ h1 span {
 .s-6-middle{
     position: relative;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     width: 100%;
     height: 50%;
+    border: 1px solid black;
+    overflow: hidden;
 }
 
 .mid-img{
@@ -746,16 +828,14 @@ h1 span {
 }
 
 .mid-cards{
-    position: absolute;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 90%;
     height: 100%;
-}
-
-.mid-1-cards{
-    right: 0;
+    overflow: hidden;
+    border: 1px solid black;
 }
 
 .mid-2-cards{
@@ -966,6 +1046,7 @@ h1 span {
     color: #ffffff;
 }
 
+/* Section-7 */
 .section-7{
     position: relative;
     display: flex;

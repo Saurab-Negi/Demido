@@ -141,13 +141,29 @@ AOS.init({
 
 
 // Section-2 GSAP Animation
+
 gsap.registerPlugin(ScrollTrigger);
 
-gsap.to(".s-2-img-0",{
-  y: -80,
-  duration: 3,
-  scrollTrigger: ".s-2-img-0",
-})
+//s-2-img-five animation
+
+let time5 = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".s-2-up",
+    scroller: "body",
+    // markers: true,
+    start: "top 40%",
+    end: "35% top",
+    scrub: 2,
+  }
+});
+
+time5
+  .to(".s-2-five-1", { y: -900, rotate: -12, duration: 0.1, ease: "power1.inOut" }, 0)
+  .to(".s-2-five-2", { y: -1000, rotate: -13, duration: 0.1, ease: "power1.inOut" }, 0)
+  .to(".s-2-five-3", { y: -900, rotate: 14, duration: 0.1, ease: "power1.inOut" }, 0)
+  .to(".s-2-five-4", { y: -1000, rotate: 15, duration: 0.1, ease: "power1.inOut" }, 0)
+  .to(".s-2-five-5", { y: -900, rotate: 18, duration: 0.1, ease: "power1.inOut" }, 0)
+  
 
 //s-2-img-1 animation
 let tl = gsap.timeline({
@@ -156,13 +172,14 @@ let tl = gsap.timeline({
       scroller: "body",
       // markers: true,
       start: "top 90%",
-      end: "top 15%",
+      end: "top 20%",
       scrub: 3,
   }
 });
-tl.to(".s-2-img-1", { x: 15, duration: 3, ease: "power1.inOut" })
-.to(".s-2-img-1", { y: -100, duration: 6, ease: "power1.inOut" })
-.to(".s-2-img-1", { x: 5, duration: 1, ease: "power1.inOut" });
+tl.to(".s-2-img-1", { x: 10, duration: 3, ease: "power2.inOut" })
+.to(".s-2-img-1", { y: -50, duration: 3, ease: "power2.inOut" })
+.to(".s-2-img-1", { rotate: 13, duration: 3, ease: "power2.inOut" })
+.to(".s-2-img-1", { x: 0, duration: 3, ease: "power2.inOut" });
 
 //s-2-img-2 animation
 let t2 = gsap.timeline({
@@ -170,31 +187,29 @@ let t2 = gsap.timeline({
       trigger: ".s-2-img-2",
       scroller: "body",
       // markers: true,
-      start: "top 60%",
-      end: "top 20%",
+      start: "20% 60%",
+      end: "60% 20%",
       scrub: 3,
   }
 });
-t2.to(".s-2-img-2", { x: -10, duration: 3, ease: "power1.inOut" })
-.to(".s-2-img-2", { y: -100, duration: 6, ease: "power1.inOut" })
-.to(".s-2-img-2", { rotate: 1, duration: 5, ease: "power1.inOut" });
+t2.to(".s-2-img-2", { y: -50, duration: 2, ease: "power1.inOut" })
+.to(".s-2-img-2", { x: -10, duration: 2, ease: "power1.inOut" })
+.to(".s-2-img-2", { y: -100, duration: 2, ease: "power1.inOut" })
 
 
 //Section-4 slider using Slik
 $(document).ready(function(){
     $('.s-4-slider').slick({
-      arrow: true,
+      arrows: true,
       infinite: true,
       slidesToShow: 3,
       slidesToScroll: 1, // Change to 1 to scroll one slide at a time
-      autoplaySpeed: 2000, // Set autoplay speed to 2 seconds
-      speed: 1000,
       responsive: [
         {
           breakpoint: 1024,
           settings: {
-            slidesToShow: 3,
-            slidesToScroll: 3,
+            slidesToShow: 4,
+            slidesToScroll: 1,
             infinite: true,
             dots: true
           }
@@ -215,8 +230,7 @@ $(document).ready(function(){
         }
       ]
     });
-  });  
-
+  });
 
   //Secton 5
   let t4 = gsap.timeline({
@@ -338,48 +352,48 @@ window.addEventListener("wheel", function(event) {
 //card-1
 let t7 = gsap.timeline({
   scrollTrigger: {
-      trigger: ".card-1",
+      trigger: ".s-6-mid",
       scroller: "body",
       // markers: true,
       start: "top 64%",
       end: "top 29%",
       scrub: 5,
-      // pin: true,
+      pin: true,
   }
 });
-t7.to(".card-1", { x: -10, duration: 1, ease: "power1.inOut" })
-.to(".card-1", { rotate: -5, duration: 2, ease: "power1.inOut" })
-.to(".card-1", { y: -10, duration: 1, ease: "power1.inOut" })
-.to(".card-1", { y: -30, duration: 1, ease: "power1.inOut" })
-.to(".card-1", { y: -50, duration: 1, ease: "power1.inOut" })
-.to(".card-1", { zIndex: 0 , duration: 1, ease: "power1.inOut" })
-.to(".card-1", { rotate: 0, duration: 2, ease: "power1.inOut" })
-.to(".card-1", { opacity: 0.9, duration: 1, ease: "power1.inOut" })
-.to(".card-1", { x: 0, duration: 1, ease: "power1.inOut" })
-.to(".card-1", { opacity: 0.7, duration: 1, ease: "power1.inOut" })
+t7.to(".card-1", { x: -10, duration: 0.3, ease: "power1.inOut" })
+// .to(".card-1", { rotate: -5, duration: 2, ease: "power1.inOut" })
+// .to(".card-1", { y: -2, duration: 1, ease: "power1.inOut" })
+// .to(".card-1", { y: -4, duration: 1, ease: "power1.inOut" })
+// .to(".card-1", { y: -6, duration: 1, ease: "power1.inOut" })
+// .to(".card-1", { zIndex: 0 , duration: 1, ease: "power1.inOut" })
+// .to(".card-1", { rotate: 0, duration: 2, ease: "power1.inOut" })
+// .to(".card-1", { opacity: 0.9, duration: 1, ease: "power1.inOut" })
+// .to(".card-1", { x: 0, duration: 1, ease: "power1.inOut" })
+// .to(".card-1", { opacity: 0.7, duration: 1, ease: "power1.inOut" })
 
 // card-2
-let t8 = gsap.timeline({
-  scrollTrigger: {
-      trigger: ".card-2",
-      scroller: "body",
-      // markers: true,
-      start: "top 50%",
-      end: "top 15%",
-      scrub: 5,
-      // pin: true,
-  }
-});
-t8.to(".card-2", { x: 10, duration: 1, ease: "power1.inOut" })
-.to(".card-2", { rotate: 5, duration: 2, ease: "power1.inOut" })
-.to(".card-2", { y: 10, duration: 1, ease: "power1.inOut" })
-.to(".card-2", { y: 30, duration: 1, ease: "power1.inOut" })
-.to(".card-2", { y: 50, duration: 1, ease: "power1.inOut" })
-.to(".card-2", { opacity: 0.8, duration: 1, ease: "power1.inOut" })
-.to(".card-2", { zIndex: 100 , duration: 1, ease: "power1.inOut" })
-.to(".card-2", { rotate: 0, duration: 2, ease: "power1.inOut" })
-.to(".card-2", { opacity: 1, duration: 1, ease: "power1.inOut" })
-.to(".card-2", { x: 0, duration: 1, ease: "power1.inOut" })
+// let t8 = gsap.timeline({
+//   scrollTrigger: {
+//       trigger: ".card-2",
+//       scroller: "body",
+//       // markers: true,
+//       start: "top 50%",
+//       end: "top 15%",
+//       scrub: 5,
+//       pin: true,
+//   }
+// });
+// t8.to(".card-2", { x: 10, duration: 1, ease: "power1.inOut" })
+// .to(".card-2", { rotate: 5, duration: 2, ease: "power1.inOut" })
+// .to(".card-2", { y: 10, duration: 1, ease: "power1.inOut" })
+// .to(".card-2", { y: 30, duration: 1, ease: "power1.inOut" })
+// .to(".card-2", { y: 50, duration: 1, ease: "power1.inOut" })
+// .to(".card-2", { opacity: 0.8, duration: 1, ease: "power1.inOut" })
+// .to(".card-2", { zIndex: 100 , duration: 1, ease: "power1.inOut" })
+// .to(".card-2", { rotate: 0, duration: 2, ease: "power1.inOut" })
+// .to(".card-2", { opacity: 1, duration: 1, ease: "power1.inOut" })
+// .to(".card-2", { x: 0, duration: 1, ease: "power1.inOut" })
 
 //card-1
 let t9 = gsap.timeline({
