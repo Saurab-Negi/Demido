@@ -233,21 +233,23 @@ $(document).ready(function(){
   });
 
   //Secton 5
+
   let t4 = gsap.timeline({
     scrollTrigger: {
         trigger: ".bottle-1",
         scroller: "body",
-        // markers: true,
+        markers: true,
         start: "top 100%",
-        end: "top 80%",
+        end: "top 40%",
         scrub: 3,
-        pin: true,
+        // pin: true,
+        pinSpacing: true,
     }
   });
   t4
-  .to(".bottle-1", { y: -500, duration: 3, ease: "power1.inOut" })
-  .to(".bottle-1", { rotate: -20, duration: 3, ease: "power1.inOut" })
-  .to(".bottle-1", { x: -130, duration: 3, ease: "power1.inOut" })
+  .to(".bottle-1", { y: -200, duration: 2, ease: "power1.inOut" })
+  .to(".bottle-1", { rotate: -20, duration: 2, ease: "power1.inOut" })
+  .to(".bottle-1", { x: -130, duration: 2, ease: "power1.inOut" })
   
 
   let t5 = gsap.timeline({
@@ -256,14 +258,14 @@ $(document).ready(function(){
         scroller: "body",
         // markers: true,
         start: "top 100%",
-        end: "top 80%",
+        end: "top 40%",
         scrub: 3,
-        pin: true,
+        // pin: true,
     }
   });
-  t5.to(".bottle-2", { y: -500, duration: 3, ease: "power1.inOut" })
-  .to(".bottle-2", { rotate: 0, duration: 3, ease: "power1.inOut" })
-  .to(".bottle-2", { x: 0, duration: 3, ease: "power1.inOut" })
+  t5.to(".bottle-2", { y: -200, duration: 2, ease: "power1.inOut" })
+  .to(".bottle-2", { rotate: 0, duration: 2, ease: "power1.inOut" })
+  .to(".bottle-2", { x: 0, duration: 2, ease: "power1.inOut" })
 
 
   let t6 = gsap.timeline({
@@ -272,14 +274,14 @@ $(document).ready(function(){
         scroller: "body",
         // markers: true,
         start: "top 100%",
-        end: "top 80%",
+        end: "top 40%",
         scrub: 3,
-        pin: true,
+        // pin: true,
     }
   });
-  t6.to(".bottle-3", { y: -500, duration: 3, ease: "power1.inOut" })
-  .to(".bottle-3", { rotate: 20, duration: 3, ease: "power1.inOut" })
-  .to(".bottle-3", { x: 130, duration: 3, ease: "power1.inOut" })
+  t6.to(".bottle-3", { y: -200, duration: 2, ease: "power1.inOut" })
+  .to(".bottle-3", { rotate: 20, duration: 2, ease: "power1.inOut" })
+  .to(".bottle-3", { x: 130, duration: 2, ease: "power1.inOut" })
 
 
 // GSAP Marquee and Wave Animation
@@ -358,42 +360,42 @@ let t7 = gsap.timeline({
       start: "top 64%",
       end: "top 29%",
       scrub: 5,
-      pin: true,
+      // pin: true,
   }
 });
 t7.to(".card-1", { x: -10, duration: 0.3, ease: "power1.inOut" })
-// .to(".card-1", { rotate: -5, duration: 2, ease: "power1.inOut" })
-// .to(".card-1", { y: -2, duration: 1, ease: "power1.inOut" })
-// .to(".card-1", { y: -4, duration: 1, ease: "power1.inOut" })
-// .to(".card-1", { y: -6, duration: 1, ease: "power1.inOut" })
-// .to(".card-1", { zIndex: 0 , duration: 1, ease: "power1.inOut" })
-// .to(".card-1", { rotate: 0, duration: 2, ease: "power1.inOut" })
-// .to(".card-1", { opacity: 0.9, duration: 1, ease: "power1.inOut" })
-// .to(".card-1", { x: 0, duration: 1, ease: "power1.inOut" })
-// .to(".card-1", { opacity: 0.7, duration: 1, ease: "power1.inOut" })
+.to(".card-1", { rotate: -5, duration: 2, ease: "power1.inOut" })
+.to(".card-1", { y: -2, duration: 1, ease: "power1.inOut" })
+.to(".card-1", { y: -4, duration: 1, ease: "power1.inOut" })
+.to(".card-1", { y: -6, duration: 1, ease: "power1.inOut" })
+.to(".card-1", { zIndex: 0 , duration: 1, ease: "power1.inOut" })
+.to(".card-1", { rotate: 0, duration: 2, ease: "power1.inOut" })
+.to(".card-1", { opacity: 0.9, duration: 1, ease: "power1.inOut" })
+.to(".card-1", { x: 0, duration: 1, ease: "power1.inOut" })
+.to(".card-1", { opacity: 0.7, duration: 1, ease: "power1.inOut" })
 
 // card-2
-// let t8 = gsap.timeline({
-//   scrollTrigger: {
-//       trigger: ".card-2",
-//       scroller: "body",
-//       // markers: true,
-//       start: "top 50%",
-//       end: "top 15%",
-//       scrub: 5,
-//       pin: true,
-//   }
-// });
-// t8.to(".card-2", { x: 10, duration: 1, ease: "power1.inOut" })
-// .to(".card-2", { rotate: 5, duration: 2, ease: "power1.inOut" })
-// .to(".card-2", { y: 10, duration: 1, ease: "power1.inOut" })
-// .to(".card-2", { y: 30, duration: 1, ease: "power1.inOut" })
-// .to(".card-2", { y: 50, duration: 1, ease: "power1.inOut" })
-// .to(".card-2", { opacity: 0.8, duration: 1, ease: "power1.inOut" })
-// .to(".card-2", { zIndex: 100 , duration: 1, ease: "power1.inOut" })
-// .to(".card-2", { rotate: 0, duration: 2, ease: "power1.inOut" })
-// .to(".card-2", { opacity: 1, duration: 1, ease: "power1.inOut" })
-// .to(".card-2", { x: 0, duration: 1, ease: "power1.inOut" })
+let t8 = gsap.timeline({
+  scrollTrigger: {
+      trigger: ".card-2",
+      scroller: "body",
+      // markers: true,
+      start: "top 50%",
+      end: "top 15%",
+      scrub: 5,
+      // pin: true,
+  }
+});
+t8.to(".card-2", { x: 10, duration: 1, ease: "power1.inOut" })
+.to(".card-2", { rotate: 5, duration: 2, ease: "power1.inOut" })
+.to(".card-2", { y: 10, duration: 1, ease: "power1.inOut" })
+.to(".card-2", { y: 30, duration: 1, ease: "power1.inOut" })
+.to(".card-2", { y: 50, duration: 1, ease: "power1.inOut" })
+.to(".card-2", { opacity: 0.8, duration: 1, ease: "power1.inOut" })
+.to(".card-2", { zIndex: 100 , duration: 1, ease: "power1.inOut" })
+.to(".card-2", { rotate: 0, duration: 2, ease: "power1.inOut" })
+.to(".card-2", { opacity: 1, duration: 1, ease: "power1.inOut" })
+.to(".card-2", { x: 0, duration: 1, ease: "power1.inOut" })
 
 //card-1
 let t9 = gsap.timeline({

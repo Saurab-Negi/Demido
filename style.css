@@ -697,28 +697,28 @@ a{
     position: relative;
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
     width: 100%;
-    height: 200vh;
+    height: 130vh;
     background:  #f5dcbe;
+    border: 1px solid black;
+    overflow: hidden;
 }
 
 .s-5-bottle{
     position: absolute;
     display: flex;
-    justify-content: center;
-    width: 15rem;
-    top: 45rem;
-    left: 33rem;
-    transform: rotate(-12deg);
+    width: 18%;
+    bottom: -10%;
+    transform: rotate(-5deg);
     z-index: 100;
 }
 
 .move {
     display: flex;
     position: absolute;
-    height: 12rem;
-    top: 25rem;
+    height: 25%;
     overflow: hidden;
     width: 100%;
 }
@@ -1297,7 +1297,7 @@ h1 span {
     color: #ffffff;
 }
 
-/* Section Nine */
+/* Footer */
 .section-9{
     width: 100%;
     height: 150vh;
