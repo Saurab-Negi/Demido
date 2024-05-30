@@ -248,8 +248,19 @@ $(document).ready(function(){
   });
   t4
   .to(".bottle-1", { y: -200, duration: 2, ease: "power1.inOut" })
-  .to(".bottle-1", { rotate: -20, duration: 2, ease: "power1.inOut" })
-  .to(".bottle-1", { x: -130, duration: 2, ease: "power1.inOut" })
+  .to(".bottle-1", { x: -10, duration: 2, ease: "power1.inOut" })
+  .to(".bottle-1", { rotate: -3, duration: 2, ease: "power1.inOut" })
+  .to(".bottle-1", { x: -20, duration: 2, ease: "power1.inOut" })
+  .to(".bottle-1", { rotate: -6, duration: 2, ease: "power1.inOut" })
+  .to(".bottle-1", { x: -30, duration: 2, ease: "power1.inOut" })
+  .to(".bottle-1", { rotate: -9, duration: 2, ease: "power1.inOut" })
+  .to(".bottle-1", { x: -40, duration: 2, ease: "power1.inOut" })
+  .to(".bottle-1", { rotate: -12, duration: 2, ease: "power1.inOut" })
+  .to(".bottle-1", { x: -50, duration: 2, ease: "power1.inOut" })
+  .to(".bottle-1", { rotate: -15, duration: 2, ease: "power1.inOut" })
+  .to(".bottle-1", { x: -60, duration: 2, ease: "power1.inOut" })
+  .to(".bottle-1", { rotate: -18, duration: 2, ease: "power1.inOut" })
+
   
 
   let t5 = gsap.timeline({
@@ -264,8 +275,9 @@ $(document).ready(function(){
     }
   });
   t5.to(".bottle-2", { y: -200, duration: 2, ease: "power1.inOut" })
-  .to(".bottle-2", { rotate: 0, duration: 2, ease: "power1.inOut" })
   .to(".bottle-2", { x: 0, duration: 2, ease: "power1.inOut" })
+  .to(".bottle-2", { rotate: 0, duration: 2, ease: "power1.inOut" })
+
 
 
   let t6 = gsap.timeline({
@@ -280,8 +292,8 @@ $(document).ready(function(){
     }
   });
   t6.to(".bottle-3", { y: -200, duration: 2, ease: "power1.inOut" })
+  .to(".bottle-3", { x: 10, duration: 2, ease: "power1.inOut" })
   .to(".bottle-3", { rotate: 20, duration: 2, ease: "power1.inOut" })
-  .to(".bottle-3", { x: 130, duration: 2, ease: "power1.inOut" })
 
 
 // GSAP Marquee and Wave Animation
