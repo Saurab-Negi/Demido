@@ -234,66 +234,48 @@ $(document).ready(function(){
 
   //Secton 5
 
-  let t4 = gsap.timeline({
-    scrollTrigger: {
-        trigger: ".bottle-1",
-        scroller: "body",
-        markers: true,
-        start: "top 100%",
-        end: "top 40%",
-        scrub: 3,
-        // pin: true,
-        pinSpacing: true,
-    }
-  });
-  t4
-  .to(".bottle-1", { y: -200, duration: 2, ease: "power1.inOut" })
-  .to(".bottle-1", { x: -10, duration: 2, ease: "power1.inOut" })
-  .to(".bottle-1", { rotate: -3, duration: 2, ease: "power1.inOut" })
-  .to(".bottle-1", { x: -20, duration: 2, ease: "power1.inOut" })
-  .to(".bottle-1", { rotate: -6, duration: 2, ease: "power1.inOut" })
-  .to(".bottle-1", { x: -30, duration: 2, ease: "power1.inOut" })
-  .to(".bottle-1", { rotate: -9, duration: 2, ease: "power1.inOut" })
-  .to(".bottle-1", { x: -40, duration: 2, ease: "power1.inOut" })
-  .to(".bottle-1", { rotate: -12, duration: 2, ease: "power1.inOut" })
-  .to(".bottle-1", { x: -50, duration: 2, ease: "power1.inOut" })
-  .to(".bottle-1", { rotate: -15, duration: 2, ease: "power1.inOut" })
-  .to(".bottle-1", { x: -60, duration: 2, ease: "power1.inOut" })
-  .to(".bottle-1", { rotate: -18, duration: 2, ease: "power1.inOut" })
+// Animation for bottle-1
+let t4 = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".bottle-1",
+    scroller: "body",
+    markers: true,
+    start: "top 90%",
+    end: "top 30%",
+    scrub: 3,
+  }
+});
+t4
+  .to(".bottle-1", { y: -200, duration: 10, ease: "power2.inOut" })
+  .to(".bottle-1", { rotate: -20, x: -150, y: -230, duration: 10, ease: "power2.inOut" }, "-=5");
 
-  
+// Animation for bottle-2
+let t5 = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".bottle-2",
+    scroller: "body",
+    start: "top 90%",
+    end: "top 30%",
+    scrub: 3,
+  }
+});
+t5
+  .to(".bottle-2", { y: -200, duration: 10, ease: "power2.inOut" })
+  .to(".bottle-2", { rotate: 1, y: -220, x: -10, duration: 10, ease: "power2.inOut" }, "-=5");
 
-  let t5 = gsap.timeline({
-    scrollTrigger: {
-        trigger: ".bottle-2",
-        scroller: "body",
-        // markers: true,
-        start: "top 100%",
-        end: "top 40%",
-        scrub: 3,
-        // pin: true,
-    }
-  });
-  t5.to(".bottle-2", { y: -200, duration: 2, ease: "power1.inOut" })
-  .to(".bottle-2", { x: 0, duration: 2, ease: "power1.inOut" })
-  .to(".bottle-2", { rotate: 0, duration: 2, ease: "power1.inOut" })
-
-
-
-  let t6 = gsap.timeline({
-    scrollTrigger: {
-        trigger: ".bottle-3",
-        scroller: "body",
-        // markers: true,
-        start: "top 100%",
-        end: "top 40%",
-        scrub: 3,
-        // pin: true,
-    }
-  });
-  t6.to(".bottle-3", { y: -200, duration: 2, ease: "power1.inOut" })
-  .to(".bottle-3", { x: 10, duration: 2, ease: "power1.inOut" })
-  .to(".bottle-3", { rotate: 20, duration: 2, ease: "power1.inOut" })
+// Animation for bottle-3
+let t6 = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".bottle-3",
+    scroller: "body",
+    start: "top 90%",
+    end: "top 30%",
+    scrub: 3,
+  }
+});
+t6
+  .to(".bottle-3", { y: -200, duration: 10, ease: "power2.inOut" })
+  .to(".bottle-3", { rotate: 22, x: 130, y: -190, duration: 10, ease: "power2.inOut" }, "-=5");
 
 
 // GSAP Marquee and Wave Animation
