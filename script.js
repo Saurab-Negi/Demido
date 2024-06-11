@@ -307,7 +307,7 @@ gsap.fromTo("h1 span",
   repeat: -1, 
   yoyo: true, 
   stagger: {
-    each: 0.3, 
+    each: 0.2, 
     repeat: -1
   }
 }, 
@@ -318,7 +318,7 @@ gsap.fromTo("h1 span",
   repeat: -1, 
   yoyo: true, 
   stagger: {
-    each: 0.3, 
+    each: 0.2, 
     repeat: -1
   }
 }
@@ -357,16 +357,13 @@ let t7 = gsap.timeline({
       // pin: true,
   }
 });
-t7.to(".card-1", { x: -10, duration: 0.3, ease: "power1.inOut" })
-.to(".card-1", { rotate: -5, duration: 2, ease: "power1.inOut" })
-.to(".card-1", { y: -2, duration: 1, ease: "power1.inOut" })
-.to(".card-1", { y: -4, duration: 1, ease: "power1.inOut" })
-.to(".card-1", { y: -6, duration: 1, ease: "power1.inOut" })
-.to(".card-1", { zIndex: 0 , duration: 1, ease: "power1.inOut" })
-.to(".card-1", { rotate: 0, duration: 2, ease: "power1.inOut" })
-.to(".card-1", { opacity: 0.9, duration: 1, ease: "power1.inOut" })
-.to(".card-1", { x: 0, duration: 1, ease: "power1.inOut" })
-.to(".card-1", { opacity: 0.7, duration: 1, ease: "power1.inOut" })
+t7.to(".card-1", { x: -20, duration: 0.3, ease: "power1.inOut" })
+.to(".card-1", { rotate: -5, duration: 0.2, ease: "power1.inOut" })
+.to(".card-1", { y: -50, duration: 1, ease: "power1.inOut" })
+.to(".card-1", { zIndex: 0 , duration: 0.1, ease: "power1.inOut" })
+.to(".card-1", { rotate: 0, duration: 0.2, ease: "power1.inOut" })
+.to(".card-1", { x: 0, duration: 0.1, ease: "power1.inOut" })
+.to(".card-1", { opacity: 0.7, duration: 0.1, ease: "power1.inOut" })
 
 // card-2
 let t8 = gsap.timeline({
@@ -380,16 +377,13 @@ let t8 = gsap.timeline({
       // pin: true,
   }
 });
-t8.to(".card-2", { x: 10, duration: 1, ease: "power1.inOut" })
-.to(".card-2", { rotate: 5, duration: 2, ease: "power1.inOut" })
-.to(".card-2", { y: 10, duration: 1, ease: "power1.inOut" })
-.to(".card-2", { y: 30, duration: 1, ease: "power1.inOut" })
+t8.to(".card-2", { x: 20, duration: 0.3, ease: "power1.inOut" })
+.to(".card-2", { rotate: 5, duration: 0.2, ease: "power1.inOut" })
 .to(".card-2", { y: 50, duration: 1, ease: "power1.inOut" })
-.to(".card-2", { opacity: 0.8, duration: 1, ease: "power1.inOut" })
-.to(".card-2", { zIndex: 100 , duration: 1, ease: "power1.inOut" })
-.to(".card-2", { rotate: 0, duration: 2, ease: "power1.inOut" })
-.to(".card-2", { opacity: 1, duration: 1, ease: "power1.inOut" })
-.to(".card-2", { x: 0, duration: 1, ease: "power1.inOut" })
+.to(".card-2", { zIndex: 100 , duration: 0.1, ease: "power1.inOut" })
+.to(".card-2", { rotate: 0, duration: 0.2, ease: "power1.inOut" })
+.to(".card-2", { opacity: 1, duration: 0.1, ease: "power1.inOut" })
+.to(".card-2", { x: 0, duration: 0.1, ease: "power1.inOut" })
 
 //card-1
 let t9 = gsap.timeline({
@@ -507,4 +501,68 @@ timeline.addLabel('card1')
     modifiers: {
       xPercent: gsap.utils.wrap(-620, 0)
     }
+  });
+
+
+  //Section-9
+
+  let S9_card = document.querySelector(".s-9-card");
+
+  let S9_img_1 = document.querySelector(".s-9-bg-img-1");
+  // Event listeners for hover animation
+  S9_card.addEventListener("mouseenter", () => {
+      gsap.fromTo(S9_img_1, 
+          { y: 0, rotate: 0 },  // Starting position (you can adjust if needed)
+          { y: -420, rotate: 4, ease: "power1.inOut", duration: 1 }
+      );
+  });
+
+  S9_card.addEventListener("mouseleave", () => {
+      gsap.to(S9_img_1, 
+          { y: -1000, ease: "easeOut", duration: 1 }
+      );
+  });
+
+
+  let S9_img_2 = document.querySelector(".s-9-bg-img-2");
+  S9_card.addEventListener("mouseenter", () => {
+      gsap.fromTo(S9_img_2, 
+          { y: 0, rotate: 0 },  // Starting position (you can adjust if needed)
+          { y: -820, rotate: 5, ease: "power1.inOut", duration: 1 }
+      );
+  });
+
+  S9_card.addEventListener("mouseleave", () => {
+      gsap.to(S9_img_2, 
+          { y: -1200, ease: "easeOut", duration: 1 }
+      );
+  });
+
+  let S9_img_3 = document.querySelector(".s-9-bg-img-3");
+  S9_card.addEventListener("mouseenter", () => {
+      gsap.fromTo(S9_img_3, 
+          { y: 0, rotate: 0 },  // Starting position (you can adjust if needed)
+          { y: -350, ease: "power1.inOut", duration: 1 }
+      );
+  });
+
+  S9_card.addEventListener("mouseleave", () => {
+      gsap.to(S9_img_3, 
+          { y: -800, ease: "easeOut", duration: 1 }
+      );
+  });
+
+  let S9_button = document.querySelector(".s-9-down-right");
+
+  S9_card.addEventListener("mouseenter", () => {
+      gsap.fromTo(S9_button, 
+          { scale: 1 },  // Starting scale (normal size)
+          { scale: 0.9, duration: 0.1 }  // Shrink to 90% of its size
+      );
+  });
+
+  S9_card.addEventListener("mouseleave", () => {
+      gsap.to(S9_button, 
+          { scale: 1, duration: 0.1 }  // Return to original size
+      );
   });
