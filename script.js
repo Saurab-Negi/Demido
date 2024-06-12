@@ -201,8 +201,8 @@ t2.to(".s-2-img-2", { y: -50, duration: 2, ease: "power1.inOut" })
 $(document).ready(function(){
     $('.s-4-slider').slick({
       arrows: true,
-      infinite: true,
-      slidesToShow: 3,
+      infinite: false,
+      slidesToShow: 4,
       slidesToScroll: 1, // Change to 1 to scroll one slide at a time
       responsive: [
         {
@@ -210,8 +210,8 @@ $(document).ready(function(){
           settings: {
             slidesToShow: 4,
             slidesToScroll: 1,
-            infinite: true,
-            dots: true
+            // infinite: true,
+            // dots: true
           }
         },
         {
@@ -350,7 +350,7 @@ let t7 = gsap.timeline({
   scrollTrigger: {
       trigger: ".s-6-mid",
       scroller: "body",
-      markers: true,
+      // markers: true,
       start: "top 38%",
       end: "top 23%",
       scrub: 5,
