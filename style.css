@@ -797,7 +797,7 @@ h1 span {
     font-weight: 500;
 }
 
-@media (max-width: 768px){
+@media (min-width: 320px) and (max-width: 450px){
     .s-6-up{
         gap: 1.5rem;
     }
@@ -936,7 +936,7 @@ h1 span {
     text-align: justify;
 }
 
-@media (max-width: 768px){
+@media (min-width: 320px) and (max-width: 450px){
     .s-6-mid{
         width: 100%;
     }
@@ -1100,7 +1100,7 @@ h1 span {
     color: #000000;
 }
 
-@media (max-width: 768px){
+@media (min-width: 320px) and (max-width: 450px){
     .about-card{
         height: 80%;
         width: 100%;
@@ -1295,7 +1295,7 @@ h1 span {
     right: 13%;
 }
 
-@media (max-width: 768px){
+@media (min-width: 320px) and (max-width: 450px){
     .s-7-card-left{
         width: 65%;
     }
@@ -1374,7 +1374,6 @@ h1 span {
     justify-content: space-between;
     align-items: center;
     width: 80%;
-    height: 15%;
 }
 
 .s-8-mid-left{
@@ -1382,7 +1381,6 @@ h1 span {
     justify-content: space-between;
     align-items: center;
     width: 50%;
-    height: 100%;
 }
 
 .s-8-mid-right{
@@ -1434,7 +1432,7 @@ h1 span {
     color: #000000;
 }
 
-@media (max-width: 768px){
+@media (min-width: 320px) and (max-width: 450px){
     .section-8{
         height: 95vh;
     }
@@ -1447,19 +1445,28 @@ h1 span {
     }
     .s-8-mid{
         flex-direction: column;
-        height: 18%;
+        gap: 1rem;
     }
     .s-8-mid-left{
         flex-direction: column;
-        height: 50%;
-        width: 80%;
+        width: 95%;
+        gap: 1rem;
     }
     .s-8-insta{
-        width: 80%;
+        width: 70%;
+    }
+    .s-8-jap{
+        width: 100%;
     }
     .s-8-mid-right{
         width: 45%;
-        height: 25%;
+    }
+    .s-8-follow-icon{
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    .s-8-follow-icon i{
+        font-size: 12px;
     }
 }
 
@@ -1607,7 +1614,7 @@ h1 span {
     width: 18%;
 }
 
-@media (max-width: 768px){
+@media (min-width: 320px) and (max-width: 450px){
     .section-9{
         height: 100%;
     }
@@ -1771,8 +1778,7 @@ h1 span {
     width: 100%;
 }
 
-@media (max-width: 768px){
-
+@media (min-width: 320px) and (max-width: 450px){
     .s-9-footer{
         justify-content: space-between;
         flex-direction: column;
@@ -1783,7 +1789,7 @@ h1 span {
     }
     .s-9-footer-left img {
         width: 85%;
-        margin: 1rem 0 1rem 0;
+        margin: 4rem 0 4rem 0;
     }
     .s-9-footer-mid{
         width: 90%;
