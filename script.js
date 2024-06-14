@@ -445,7 +445,7 @@ let timeline = gsap.timeline({
     pinSpacing: true,
     start: "center center",
     end: "+=4000",
-    markers: true,
+    // markers: true,
     scrub: 1,
   }
 });
