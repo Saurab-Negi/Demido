@@ -893,8 +893,9 @@ h1 span {
 }
 
 .circle-img{
-    width: 65%;
-    height: 25%;
+    object-fit: cover;
+    width: 16rem;
+    height: 8rem;
 }
 
 .card-detail{
@@ -914,16 +915,53 @@ h1 span {
     font-size: 0.7rem;
     font-weight: 500;
     opacity: 0.7;
+    text-align: justify;
+}
+
+@media (max-width: 768px){
+    .s-6-mid{
+        width: 100%;
+    }
+    .mid-img{
+        display: none;
+    }
+    .mid-cards{
+        width: 100%;  
+    }
+    .mid-1-cards{
+        height: 76%;
+    }
+    .mid-2-cards{
+        height: 77%;
+    }
+    .mid-1-card, .mid-2-card{
+        width: 90%;
+    }
+    .circle-img-mid-1{
+        width: 10rem;
+        height: 5rem;
+    }
+    .circle-img-mid-2{
+        width: 8rem;
+        height: 5rem;
+    }
+    .card-detail{
+        width: 65%;
+        font-size: 0.6rem;
+        line-height: 1rem;
+    }
+    .card-bottom{
+        width: 80%;
+        font-size: 0.6rem;
+    }
 }
 
 .s-6-bottom{
-    position: relative;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     flex-direction: column;
     width: 80%;
-    height: 120vh;
 }
 
 .about-card{
@@ -935,6 +973,8 @@ h1 span {
     border-radius: 15px;
     padding: 4.5rem;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 4rem;
+    margin-right: 5rem;
 }
 
 .card-img-left{
@@ -999,16 +1039,13 @@ h1 span {
 }
 
 .s-6-about{
-    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
-    bottom: 2%;
-    right: 8%;
     width: 13%;
-    height: 5%;
-    gap: .8rem;
+    gap: 0.8rem;
     cursor: pointer;
+    margin-right: 5rem;
 }
 
 .s-6-about-head{
@@ -1025,8 +1062,8 @@ h1 span {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 28%;
-    height: 100%;
+    width: 2.5rem;
+    height: 2.5rem;
     background: #000000;
     border-radius: 50%;
     transition: 0.3s ease;
@@ -1046,13 +1083,12 @@ h1 span {
 }
 
 @media (max-width: 768px){
-    .s-6-bottom{
-        height: 105vh;
-    }
     .about-card{
         height: 80%;
         width: 100%;
         padding: 1rem;
+        margin-bottom: 2rem;
+        margin-right: 0;
     }
     .card-img-left{
         display: none;
@@ -1078,10 +1114,7 @@ h1 span {
     .s-6-about{
         width: 35%;
         gap: 0;
-    }
-    .s-6-about-icon{
-        width: 30%;
-        height: 65%;
+        margin-right: 0;
     }
     .card-img-left{
         width: 30%;
@@ -1636,34 +1669,34 @@ h1 span {
     justify-content: center;
     align-items: center;
     width: 40%;
-    height: 90%;
 }
 
 .s-9-footer-left img{
     width: 85%;
+    margin: 7rem 0 7rem 0;
 }
 
 .s-9-footer-mid{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
     width: 30%;
-    height: 90%;
-    gap: 5%;
+    gap: 3rem;
 }
 
 .s-9-footer-mid-nav{
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    width: 60%;
-    height: 40%;
+    margin-right: 6rem;
+    margin-top: 6.5rem;
 }
 
 .s-9-footer-mid-nav span{
     font-size: 1.3rem;
     font-weight: 500;
+    letter-spacing: 2px;
     cursor: pointer;
 }
 
@@ -1673,7 +1706,7 @@ h1 span {
     justify-content: space-between;
     align-items: center;
     width: 60%;
-    height: 15%;
+    margin-bottom: 6.5rem;
 }
 
 .s-9-links{
@@ -1687,10 +1720,11 @@ h1 span {
 .s-9-link-item{
     font-size: .8rem;
     font-weight: 500;
+    letter-spacing: 1px;
 }
 
 .s-9-links img{
-    width: 4%;
+    width: 10px;
 }
 
 .s-9-footer-right{
@@ -1698,9 +1732,6 @@ h1 span {
     justify-content: flex-end;
     align-items: flex-end;
     width: 30%;
-    height: 90%;
-    padding-bottom: 5%;
-    padding-right: 3%;
 }
 
 .s-9-footer-info{
@@ -1708,7 +1739,8 @@ h1 span {
     justify-content: space-between;
     flex-direction: column;
     width: 65%;
-    height: 40%;
+    margin: 10rem 2rem 10rem 0;
+    gap: 2rem;
 }
 
 .footer-info-logo{
@@ -1718,7 +1750,6 @@ h1 span {
 .footer-info-navi{
     display: flex;
     width: 100%;
-    height: 40%;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
@@ -1736,40 +1767,44 @@ h1 span {
 @media (max-width: 768px){
 
     .s-9-footer{
+        justify-content: space-between;
         flex-direction: column;
-        padding-top: 10%;
+        padding-top: 2rem;
+        height: 60rem;
     }
     .s-9-footer-left{
-        width: 80%;
-        padding-top: 5%;
+        width: 85%;
+    }
+    .s-9-footer-left img {
+        width: 85%;
+        margin: 1rem 0 1rem 0;
     }
     .s-9-footer-mid{
         width: 90%;
-        height: 100vh;
         justify-content: space-between;
         align-items: flex-start;
-        gap: 0;
     }
     .s-9-footer-mid-nav{
-        padding: 5%;
+        padding-left: 1rem;
         width: 100%;
-        height: 70%;
+        margin-top: 1rem;
     }
     .s-9-footer-mid-social{
-        padding-left: 5%;
+        padding-left: 1rem;
         align-items: flex-start;
-        height: 30%;
+        margin-bottom: 1rem;
     }
     .s-9-footer-right{
         width: 90%;
         align-items: center;
         justify-content: flex-start;
         padding: 0;
+        margin-bottom: 1rem;
     }
     .s-9-footer-info{
         justify-content: space-around;
-        height: 80%;
         align-items: flex-start;
-        padding-left: 5%;
+        padding-left: 1rem;
+        margin: 0;
     }
 }
