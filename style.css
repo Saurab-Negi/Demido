@@ -100,15 +100,13 @@ a{
 }
 
 .nav-left{
-    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 22%;
-    height: 100vh;
 }
 
-.nav-left a{
+.nav-close{
     position: absolute;
     left: 5rem;
     top: 4rem;
@@ -135,10 +133,6 @@ a{
     object-fit: cover;
 }
 
-.nav-left img{
-    width: 100%;
-    background-size: contain;
-}
 
 .nav-right{
     display: flex;
@@ -148,6 +142,11 @@ a{
     padding: 4rem;
     flex: 1;
     gap: 2rem;
+}
+
+.nav-right-hidden{
+    display: none;
+    width: 100%;
 }
 
 .nav-right-l{
@@ -162,32 +161,24 @@ a{
     align-items: center;
     font-size: 0.7rem;
     font-weight: 500;
-    height: 4rem;
-    overflow: hidden;
     padding-left: 4.5rem;
+    margin: 0;
 }
 
 .nav-right-l-items{
-    position: relative;
     display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
     width: 30rem;
-    height: 100%;
     gap: 1rem;
 }
 
 .nav-right-l-item{
-    position: absolute;
     display: flex;
     flex-direction: column;
     width: 25rem;
-    height: 24rem;
     line-height: 3.5rem;
     right: 0.8rem;
-}
-
-.nav-right-l-items li{
-    align-items: center;
-    padding-left: 3rem;
 }
 
 .nav-right a{
@@ -196,17 +187,18 @@ a{
     font-weight: 500;
 }
 .nav-right-l-arrow{
-    position: absolute;
-    width: 2rem;
-    height: 2rem;
     top: 10px;
-    left: 10px;
+    left: 15px;
+}
+
+.arrow{
+    width: 2rem;
 }
 
 .nav-right-r{
     width: 50%;
     display: flex;
-    position: relative;
+    justify-content: space-between;
     flex-direction: column;
     padding: 1rem;
 }
@@ -221,22 +213,21 @@ a{
 }
 
 .nav-right-demido{
-    width: 21rem;
+    width: 80%;
 }
 
 .nav-right-blackshampoo{
-    width: 21rem;
+    width: 80%;
     border-radius: 5px;
 }
 
 .nav-right-r-link{
     display: flex;
-    position: absolute;
+    justify-content: space-between;
+    align-items: flex-end;
     flex-direction: column;
     width: 100%;
-    height: 10rem;
-    bottom: 1rem;
-    right: 1rem;
+    gap: 2.5rem;
 }
 
 .nav-right-r-link a{
@@ -245,13 +236,11 @@ a{
 }
 
 .nav-right-r-link-item{
-    position: absolute;
     display: flex;
     justify-content: center;
     flex-direction: column;
     width: 15rem;
     gap: 1rem;
-    right: 0;
 }
 
 .nav-right-r-link-items{
@@ -267,10 +256,12 @@ a{
     display: flex;
     justify-content: space-between;
 }
+
 .nav-right-r-link-items img {
     margin-right: 1rem;
     transition: transform 0.2s ease;
 }
+
 .nav-right-r-link-items:hover img {
     transform: translateX(10px);
 }
@@ -284,12 +275,79 @@ a{
 }
 
 .nav-right-r-link-insta{
-    position: absolute;
-    width: 7rem;
+    width: 30%;
     gap: 0.5rem;
-    right: 0;
-    bottom: 1rem;
     cursor: pointer;
+}
+
+@media (min-width: 320px) and (max-width: 450px){
+    .nav-left{
+        display: none;
+    }
+    .nav-close{
+        font-size: 1.2rem;
+        left: 1.5rem;
+        top: 1rem;
+    }
+    .nav-right-hidden{
+        display: flex;
+        justify-content: flex-end;
+    }
+    .nav-right-demido-hide{
+        width: 45%;
+        margin: 1.5rem 1.2rem 2rem 0;
+    }
+    .nav-right{
+        justify-content: flex-start;
+        flex-direction: column;
+        padding: 0;
+        gap: 0;
+    }
+    .nav-right-l{
+        height: 18rem;
+        width: 100%;
+    }
+    .nav-right-l-items{
+        padding-left: 1.5rem;
+    }
+    .nav-right-l-item{
+        line-height: 2.5rem;
+    }
+    .nav-right-l-item a{
+        font-size: 2.6rem;
+    }
+    .nav-right-l-arrow{
+        display: none;
+    }
+    .nav-right-l p{
+        display: none;
+    }
+    .nav-right-r{
+        flex-direction: column-reverse;
+        width: 100%;
+        gap: 2rem;
+        margin-bottom: 1.5rem;
+        padding-left: 1.5rem;
+    }
+    .nav-right-demido{
+        display: none;
+    }
+    .nav-right-r-link{
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    .nav-right-r-link-items{
+        overflow: hidden;
+    }
+    .nav-right-r-link a{
+        font-size: 12px;
+    }
+    .nav-right-r-logo{
+        align-items: flex-start;
+    }
+    .nav-right-blackshampoo{
+        width: 100%;
+    }
 }
 
 /* Section One */

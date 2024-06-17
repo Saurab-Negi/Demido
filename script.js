@@ -39,7 +39,7 @@ gsap.fromTo(".loading-img2", {
 
 //Navbar
 var menu= document.querySelector(".menu a")
-var close= document.querySelector(".nav-left a")
+var close= document.querySelector(".nav-close")
 
 
 var t0= gsap.timeline()
