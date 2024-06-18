@@ -38,50 +38,40 @@ gsap.fromTo(".loading-img2", {
 });
 
 //Navbar
-var menu= document.querySelector(".menu a")
-var close= document.querySelector(".nav-close")
+// var menu= document.querySelector(".menu a")
+// var close= document.querySelector(".nav-close")
 
 
-var t0= gsap.timeline()
-t0.to(".nav",{
-  top: 0,
-  duration: 1,
-})
+// var t0= gsap.timeline()
+// t0.to(".nav",{
+//   top: 0,
+//   duration: 1,
+// })
 
-t0.pause()
+// t0.pause()
 
-menu.addEventListener("click", function(){
-  t0.play()
+// menu.addEventListener("click", function(){
+//   t0.play()
   
-})
+// })
 
-close.addEventListener("click", function(){
-  t0.reverse()
-})
-// var menu = document.querySelector(".menu a");
-// var close = document.querySelector(".nav-left a");
-// var nav = document.querySelector(".nav");
+// close.addEventListener("click", function(){
+//   t0.reverse()
+// })
 
-// var t0 = gsap.timeline({ paused: true });
+function HideShow1() {
+  var showBar = document.getElementById('nav-show');
+  var menuBtn = document.getElementById('menuBtnShow');
+  
+  showBar.classList.toggle('show');
 
-// t0.to(".nav", {
-//     top: 0,
-//     duration: 1,
-//     onStart: function() {
-//         nav.style.display = "block"; // Show navbar when animation starts
-//     },
-//     onReverseComplete: function() {
-//         nav.style.display = "none"; // Hide navbar when animation completes
-//     }
-// });
+  if (showBar.classList.contains('show')) {
+    menuBtn.textContent = "CLOSE";
+  } else {
+    menuBtn.textContent = "MENU";
+  }
+}
 
-// menu.addEventListener("click", function() {
-//     t0.play();
-// });
-
-// close.addEventListener("click", function() {
-//     t0.reverse();
-// });
 
 //Slick 
 $(document).ready(function(){
