@@ -74,16 +74,6 @@ function HideShow1() {
 
 
 //Slick 
-$(document).ready(function(){
-    $('.carousel-img').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true,
-        // autoplaySpeed: 2000,
-        infinite: true
-    });
-});
-
 
 //Section-1 slider using Slik
 $(document).ready(function(){
@@ -98,8 +88,8 @@ $(document).ready(function(){
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToShow: 1,
+          slidesToScroll: 1,
           infinite: true,
           dots: true
         }
@@ -107,8 +97,8 @@ $(document).ready(function(){
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2
+          slidesToShow: 1,
+          slidesToScroll: 1
         }
       },
       {
