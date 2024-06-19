@@ -490,51 +490,80 @@ timeline.addLabel('card1')
 
   //Section-9
 
-  let S9_card = document.querySelector(".s-9-card");
+  const S9_card = document.querySelector(".s-9-card");
 
-  let S9_img_1 = document.querySelector(".s-9-bg-img-1");
-  // Event listeners for hover animation
-  S9_card.addEventListener("mouseenter", () => {
-      gsap.fromTo(S9_img_1, 
-          { y: 0, rotate: 0 },  // Starting position (you can adjust if needed)
-          { y: -420, rotate: 4, ease: "power1.inOut", duration: 1 }
-      );
-  });
+  function getAnimationValues(image) {
+    const desktopQuery = window.matchMedia('(min-width: 1024px)');
+    const tabletQuery = window.matchMedia('(min-width: 451px) and (max-width: 1000px)');
+    const mobileQuery = window.matchMedia('(max-width: 450px)');
 
-  S9_card.addEventListener("mouseleave", () => {
-      gsap.to(S9_img_1, 
-          { y: -1000, ease: "easeOut", duration: 1 }
-      );
-  });
+    let enter, leave;
+
+    if (desktopQuery.matches) {
+      if (image === 'S9_img_1') {
+        enter = { y: -420, rotate: 4 };
+        leave = { y: -1000 };
+      } else if (image === 'S9_img_2') {
+        enter = { y: -820, rotate: 5 };
+        leave = { y: -1200 };
+      } else if (image === 'S9_img_3') {
+        enter = { y: -350 };
+        leave = { y: -800 };
+      }
+    } else if (tabletQuery.matches) {
+      if (image === 'S9_img_1') {
+        enter = { y: -500, rotate: 3 };
+        leave = { y: -800 };
+      } else if (image === 'S9_img_2') {
+        enter = { y: -1000, rotate: 4 };
+        leave = { y: -1200 };
+      } else if (image === 'S9_img_3') {
+        enter = { y: -500 };
+        leave = { y: -700 };
+      }
+    } else if (mobileQuery.matches) {
+      if (image === 'S9_img_1') {
+        enter = { y: -1200, rotate: 2 };
+        leave = { y: -1700 };
+      } else if (image === 'S9_img_2') {
+        enter = { y: -1600, rotate: 10 };
+        leave = { y: -2200 };
+      } else if (image === 'S9_img_3') {
+        enter = { y: -1300 };
+        leave = { y: -1600 };
+      }
+    }
+
+    return { enter, leave };
+  }
+
+  function applyResponsiveAnimation() {
+    const images = [
+      { element: document.querySelector('.s-9-bg-img-1'), name: 'S9_img_1' },
+      { element: document.querySelector('.s-9-bg-img-2'), name: 'S9_img_2' },
+      { element: document.querySelector('.s-9-bg-img-3'), name: 'S9_img_3' }
+    ];
+
+    images.forEach(({ element, name }) => {
+      const { enter, leave } = getAnimationValues(name);
+
+      function handleMouseEnter() {
+        gsap.fromTo(element, { y: 0, rotate: 0 }, { y: enter.y, rotate: enter.rotate, ease: "power1.inOut", duration: 1 });
+      }
+
+      function handleMouseLeave() {
+        gsap.to(element, { y: leave.y, ease: "easeOut", duration: 1 });
+      }
+
+      S9_card.addEventListener("mouseenter", handleMouseEnter);
+      S9_card.addEventListener("mouseleave", handleMouseLeave);
+    });
+  }
+
+  applyResponsiveAnimation();
+  window.addEventListener('resize', applyResponsiveAnimation);
 
 
-  let S9_img_2 = document.querySelector(".s-9-bg-img-2");
-  S9_card.addEventListener("mouseenter", () => {
-      gsap.fromTo(S9_img_2, 
-          { y: 0, rotate: 0 },  // Starting position (you can adjust if needed)
-          { y: -820, rotate: 5, ease: "power1.inOut", duration: 1 }
-      );
-  });
-
-  S9_card.addEventListener("mouseleave", () => {
-      gsap.to(S9_img_2, 
-          { y: -1200, ease: "easeOut", duration: 1 }
-      );
-  });
-
-  let S9_img_3 = document.querySelector(".s-9-bg-img-3");
-  S9_card.addEventListener("mouseenter", () => {
-      gsap.fromTo(S9_img_3, 
-          { y: 0, rotate: 0 },  // Starting position (you can adjust if needed)
-          { y: -350, ease: "power1.inOut", duration: 1 }
-      );
-  });
-
-  S9_card.addEventListener("mouseleave", () => {
-      gsap.to(S9_img_3, 
-          { y: -800, ease: "easeOut", duration: 1 }
-      );
-  });
 
   let S9_button = document.querySelector(".s-9-down-right");
 
