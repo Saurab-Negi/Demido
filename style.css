@@ -58,7 +58,10 @@ a{
 }
 
 @media (min-width: 320px) and (max-width: 450px){
-    .loading-img1, .loading-img2{
+    .loading-img1{
+        width: 14rem;
+    }
+    .loading-img2{
         width: 17rem;
     }
 }
@@ -1093,18 +1096,6 @@ h1 span {
         width: 45%;
         bottom: 0;
     }
-    .move{
-
-    }
-    .marque{
-
-    }
-    .marque h1{
-
-    }
-    h1 span{
-
-    }
 }
 
 @media (min-width: 451px) and (max-width: 1000px){
@@ -2131,12 +2122,12 @@ h1 span {
     }
     .s-9-bg-img-1{
         width: 44%;
-        top: 90rem;
+        top: 105rem;
         left: -6rem;
     }
     .s-9-bg-img-2{
         width: 32%;
-        top: 115rem;
+        top: 120rem;
         transform: rotate(8deg);
     }
     .s-9-bg-img-3{

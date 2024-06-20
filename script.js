@@ -523,13 +523,13 @@ timeline.addLabel('card1')
       }
     } else if (mobileQuery.matches) {
       if (image === 'S9_img_1') {
-        enter = { y: -1200, rotate: 2 };
-        leave = { y: -1700 };
+        enter = { y: -1400, rotate: 2 };
+        leave = { y: -2000 };
       } else if (image === 'S9_img_2') {
-        enter = { y: -1600, rotate: 10 };
-        leave = { y: -2200 };
+        enter = { y: -1650, rotate: 10 };
+        leave = { y: -2300 };
       } else if (image === 'S9_img_3') {
-        enter = { y: -1300 };
+        enter = { y: -1400 };
         leave = { y: -1600 };
       }
     }
